@@ -18,7 +18,7 @@ const arrayType = {
   type: "array",
 };
 
-const shippingHooks = [
+const returnHooks = [
   {
     name: "propose_return",
     description:
@@ -108,34 +108,4 @@ const shippingHooks = [
   },
 ];
 
-const paymentHooks = [
-  {
-    name: "refund_payment",
-    description:
-      "Refunds the payment for the order. If no amount is specified, the full amount will be refunded. Amount and reason are required.",
-    parameters: {
-      ...objectType,
-      properties: {
-        amount: {
-          ...numberType,
-          description: "Amount to be refunded.",
-        },
-        reason: {
-          ...stringType,
-          description: "Reason for refund.",
-        },
-        note: {
-          ...stringType,
-          description: "Additional note for refund.",
-        },
-        no_notification: {
-          ...booleanType,
-          description: "Flag to indicate whether notifications should be sent.",
-        },
-      },
-    },
-    required: ["amount", "reason"],
-  },
-];
-
-export default [...shippingHooks, ...paymentHooks];
+export default returnHooks;
