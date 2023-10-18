@@ -8,48 +8,35 @@
   </a>
 </p>
 <h1 align="center">
-  Medusa Product AI Widget
+  Medusa AI Order Returns Assistant
 </h1>
 
-<p align="center">
-  A <a href="https://medusajs.com/">Medusa</a> admin widget to improve product descriptions with AI. Built with <a href="https://docs.medusajs.com/ui">Medusa UI</a>, <a href="https://platform.openai.com/">OpenAI</a> and <a href="https://sdk.vercel.ai/">Vercel AI SDK</a>.
-</p>
+
+An AI Order Returns Assistant widget for the [Medusa](https://medusajs.com/) admin. You can use natural language to explain the situation, and it will extract all necessary data to create the return order. Built with [Medusa UI](https://docs.medusajs.com/ui), [OpenAI](https://platform.openai.com), and [Vercel AI SDK](https://sdk.vercel.ai).
+
+Feel free to take this code and use it to create any Medusa AI assistant you need. By editing the system prompt in `src/api/routes/admin/completion/order-returns.ts` and the functions in `src/util/gpt-functions/returns.ts` and `src/admin/widgets/assistants/order-assistant.tsx`, you can change its behavior and give it access to different admin hooks.
+
 <p align="center">
   <a href="https://twitter.com/intent/follow?screen_name=VariableVic">
     <img src="https://img.shields.io/twitter/follow/VariableVic.svg?label=Follow%20@VariableVic" alt="Follow @VariableVic" />
   </a>
 </p>
 
-https://github.com/VariableVic/medusa-product-ai-widget/assets/42065266/1ba79467-d178-418a-963d-da17b9ee3506
-
+https://github.com/VariableVic/medusa-ai-assistant/assets/42065266/51ce4de4-c0e9-423c-baf2-d86eb3129097
 
 ## Prerequisites
 
 1. This plugin requires an OpenAI API key and platform account. Go to https://platform.openai.com/account/api-keys to set this up.
-2. You need a Medusa server with the Admin installed. The fastest way to set this up is by using [create-medusa-app](https://docs.medusajs.com/create-medusa-app).
+2. You need a valid Medusa database. The fastest way to set this up is by using [create-medusa-app](https://docs.medusajs.com/create-medusa-app).
 
 ## Getting Started
 
-1. Install the package with `yarn add medusa-product-ai-widget` or `npm i medusa-product-ai-widget`.
-2. In `medusa-config.js`, add the plugin to the `plugins` array with the following options:
-
-```js
-const plugins = [
-  // ... other plugins
-  {
-    resolve: `medusa-product-ai-widget`,
-    options: {
-      api_key: process.env.OPENAI_API_KEY,
-      enableUI: true
-    }
-  }
-]
-```
-
-3. In your `.env` file, add an `OPENAI_API_KEY` environment variable containing your API key:
+1. Clone repo and install dependencies.
+2. In your `.env` file, add an `OPENAI_API_KEY` environment variable containing your API key, and link  your database:
 
 ```
 OPENAI_API_KEY=<YOUR OPENAI API KEY>
+DATABASE_URL=<YOUR MEDUSA DB URL>
 ```
 
-4. Start your dev server and log into the admin. Open any product that has a product description and the widget will appear on the bottom of the page!
+3. Start your dev server and log into the admin. Open any order details page and the widget will appear on the bottom of the page!
