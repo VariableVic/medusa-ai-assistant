@@ -251,8 +251,6 @@ const OrderAssistantWidget = ({ order, notify }: OrderDetailsWidgetProps) => {
   }, [messages]);
 
   // framer-motion didn't do what I wanted, so I hacked together these animations
-  const timer = (ms: number) => new Promise((res) => setTimeout(res, ms));
-
   const handleOnFocus = async () => {
     let height = containerRef.current.clientHeight;
 
