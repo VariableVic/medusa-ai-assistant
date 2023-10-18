@@ -28,7 +28,7 @@ https://github.com/VariableVic/medusa-ai-assistant/assets/42065266/51ce4de4-c0e9
 
 ## Prerequisites
 
-1. This plugin requires an OpenAI API key and platform account. Go to https://platform.openai.com/account/api-keys to set this up.
+1. This widget requires an OpenAI platform accoun and API key. Go to https://platform.openai.com/account/api-keys to set this up.
 2. You need a valid Medusa database. The fastest way to set this up is by using [create-medusa-app](https://docs.medusajs.com/create-medusa-app).
 
 ## Getting Started
