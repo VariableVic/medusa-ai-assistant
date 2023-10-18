@@ -16,7 +16,7 @@ An AI Order Returns Assistant widget for the [Medusa](https://medusajs.com/) adm
 
 Feel free to take this code and use it to create any Medusa AI assistant you need. By editing the system prompt in `src/api/routes/admin/completion/order-returns.ts` and the functions in `src/util/gpt-functions/returns.ts` and `src/admin/widgets/assistants/order-assistant.tsx`, you can change its behavior and give it access to different admin hooks.
 
-Disclaimer: this code is the result of my experimentation, and is by no means optimized or actively maintained.
+**Disclaimer**: this code is the result of my experimentation, and is by no means optimized or actively maintained.
 
 <p align="center">
   <a href="https://twitter.com/intent/follow?screen_name=VariableVic">
